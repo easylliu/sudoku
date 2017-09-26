@@ -24,11 +24,12 @@ int index0 = 0;
 char  output[1000000];
 int main(int argc, char* argv[])
 {
+	
 	if (inputcheck(argc, argv) == 0) {
 		return 0;
 	}
 
-	if ((strcmp(argv[2], "-c")) == 0) {
+	if ((strcmp(argv[1], "-c")) == 0) {
 		int sudo_count = 0;								//数独终局数量
 		char sudo[9][10] = { "958367124",				//数独种子
 			"237451968",
@@ -48,20 +49,20 @@ int main(int argc, char* argv[])
 			"3478","3567","3568","3578","3678","4567","4568","4578","4678","5678" };	//交换数字的组合
 		ofstream my_file("sudoku.txt", ios::out);
 		my_file.close();
-		sudo_count = atoi(argv[3]);
+		sudo_count = atoi(argv[2]);
 		sudo_create(sudo_count, sudo, changenum_array);
 	}
-	else if ((strcmp(argv[2], "-s")) == 0) {
+	else if ((strcmp(argv[1], "-s")) == 0) {
 		int i = 0, j, count = 0;
 		char s;
 		ofstream my_file("sudoku.txt", ios::out);
 		my_file.close();
-		ifstream infile(argv[3]);
+		ifstream infile(argv[2]);
 		if (!infile.is_open()) {
 			cout << "file cannot be opened!";
 			return 0;
 		}
-		//	infile.open(argv[3],ios::in);
+		//	infile.open(argv[2],ios::in);
 		while ((s = infile.get()) != EOF) {
 			for (i = 0; i < 9; i++) {
 				for (j = 0; j < 9; j++) {
@@ -90,16 +91,16 @@ int main(int argc, char* argv[])
 	return 0;
 }
 int inputcheck(int argc, char* argv[]) {
-	if (argc != 4) {
+	if (argc != 3) {
 		cout << "the num of string is illegal!";
 		return 0;
 	}
-	if (strcmp(argv[1], "sudoku.exe") != 0) {
+	if (strcmp(argv[0], "sudoku.exe") != 0) {
 		cout << "the first string is illegal!";
 		return 0;
 	}
-	if (strcmp(argv[2], "-c") == 0) {
-		if (atoi(argv[3]) < 1 || atoi(argv[3]) > 1000000) {
+	if (strcmp(argv[1], "-c") == 0) {
+		if (atoi(argv[2]) < 1 || atoi(argv[2]) > 1000000) {
 			cout << "the third string is illegal!";
 			return 0;
 		}
