@@ -95,10 +95,6 @@ int inputcheck(int argc, char* argv[]) {
 		cout << "the num of string is illegal!";
 		return 0;
 	}
-	if (strcmp(argv[0], "sudoku.exe") != 0) {
-		cout << "the first string is illegal!";
-		return 0;
-	}
 	if (strcmp(argv[1], "-c") == 0) {
 		if (atoi(argv[2]) < 1 || atoi(argv[2]) > 1000000) {
 			cout << "the third string is illegal!";
