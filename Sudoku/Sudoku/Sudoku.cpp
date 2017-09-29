@@ -95,6 +95,7 @@ int inputcheck(int argc, char* argv[]) {
 		cout << "the num of string is illegal!";
 		return 0;
 	}
+
 	if (strcmp(argv[1], "-c") == 0) {
 		if (atoi(argv[2]) < 1 || atoi(argv[2]) > 1000000) {
 			cout << "the third string is illegal!";
@@ -191,7 +192,7 @@ void sudo_create(int sudo_count, char sudo[9][10], char changenum_array[70][5]) 
 int matrix_change(int count, int sudo_count, char sudo[9][10], char output[1000000]) {
 	int line0, line1, line2, column0, column1, column2;
 	int i = 3, j, k, index = 0;
-	char mid_sudo[9][10];
+	char mid_sudo[9][10],mid_sudo1[9][10];
 	for (line0 = 0; line0 < 2; line0++) {
 		if (line0 == 0) {
 			strcpy_s(mid_sudo[0], sudo[0]);
@@ -205,30 +206,30 @@ int matrix_change(int count, int sudo_count, char sudo[9][10], char output[10000
 		}
 		for (line1 = 0; line1 < 6; line1++) {
 			line_range(3, line1, mid_sudo, sudo);
-			for (line2 = 0; line2 < 6; line1++) {
+			for (line2 = 0; line2 < 6; line2++) {
 				line_range(6, line2, mid_sudo, sudo);
 				for (column0 = 0; column0 < 2; column0++) {
 					if (column0 == 0) {
 						for (j = 0; j < 9; j++) {
-							mid_sudo[j][0] = sudo[j][0];
-							mid_sudo[j][1] = sudo[j][1];
-							mid_sudo[j][2] = sudo[j][2];
+							mid_sudo1[j][0] = mid_sudo[j][0];
+							mid_sudo1[j][1] = mid_sudo[j][1];
+							mid_sudo1[j][2] = mid_sudo[j][2];
 						}
 					}
 					if (column0 == 1) {
 						for (j = 0; j < 9; j++) {
-							mid_sudo[j][0] = sudo[j][0];
-							mid_sudo[j][2] = sudo[j][1];
-							mid_sudo[j][1] = sudo[j][2];
+							mid_sudo1[j][0] = mid_sudo[j][0];
+							mid_sudo1[j][2] = mid_sudo[j][1];
+							mid_sudo1[j][1] = mid_sudo[j][2];
 						}
 					}
 					for (column1 = 0; column1 < 6; column1++) {
-						column_range(3, column1, mid_sudo, sudo);
+						column_range(3, column1, mid_sudo1, mid_sudo);
 						for (column2 = 0; column2< 6; column2++) {
-							column_range(6, column2, mid_sudo, sudo);
+							column_range(6, column2, mid_sudo1, mid_sudo);
 							for (j = 0; j < 9; j++) {
 								for (k = 0; k < 9; k++) {
-									output[index++] = mid_sudo[j][k];
+									output[index++] = mid_sudo1[j][k];
 									if (k == 8 && j != 8) {
 										output[index++] = '\n';
 									}
@@ -265,36 +266,36 @@ int matrix_change(int count, int sudo_count, char sudo[9][10], char output[10000
 	return count;
 }
 
-void line_range(int init, int n, char mid_sudo[9][10], char sudo[9][10]) {
+void line_range(int init, int n, char mid_sudo1[9][10], char sudo[9][10]) {
 	if (n == 0) {
-		strcpy_s(mid_sudo[init], sudo[init]);
-		strcpy_s(mid_sudo[init + 1], sudo[init + 1]);
-		strcpy_s(mid_sudo[init + 2], sudo[init + 2]);
+		strcpy_s(mid_sudo1[init], sudo[init]);
+		strcpy_s(mid_sudo1[init + 1], sudo[init + 1]);
+		strcpy_s(mid_sudo1[init + 2], sudo[init + 2]);
 	}
 	if (n == 1) {
-		strcpy_s(mid_sudo[init], sudo[init]);
-		strcpy_s(mid_sudo[init + 2], sudo[init + 1]);
-		strcpy_s(mid_sudo[init + 1], sudo[init + 2]);
+		strcpy_s(mid_sudo1[init], sudo[init]);
+		strcpy_s(mid_sudo1[init + 2], sudo[init + 1]);
+		strcpy_s(mid_sudo1[init + 1], sudo[init + 2]);
 	}
 	if (n == 2) {
-		strcpy_s(mid_sudo[init + 1], sudo[init]);
-		strcpy_s(mid_sudo[init], sudo[init + 1]);
-		strcpy_s(mid_sudo[init + 2], sudo[init + 2]);
+		strcpy_s(mid_sudo1[init + 1], sudo[init]);
+		strcpy_s(mid_sudo1[init], sudo[init + 1]);
+		strcpy_s(mid_sudo1[init + 2], sudo[init + 2]);
 	}
 	if (n == 3) {
-		strcpy_s(mid_sudo[init + 1], sudo[init]);
-		strcpy_s(mid_sudo[init + 2], sudo[init + 1]);
-		strcpy_s(mid_sudo[init], sudo[init + 2]);
+		strcpy_s(mid_sudo1[init + 1], sudo[init]);
+		strcpy_s(mid_sudo1[init + 2], sudo[init + 1]);
+		strcpy_s(mid_sudo1[init], sudo[init + 2]);
 	}
 	if (n == 4) {
-		strcpy_s(mid_sudo[init + 2], sudo[init]);
-		strcpy_s(mid_sudo[init], sudo[init + 1]);
-		strcpy_s(mid_sudo[init + 1], sudo[init + 2]);
+		strcpy_s(mid_sudo1[init + 2], sudo[init]);
+		strcpy_s(mid_sudo1[init], sudo[init + 1]);
+		strcpy_s(mid_sudo1[init + 1], sudo[init + 2]);
 	}
 	if (n == 5) {
-		strcpy_s(mid_sudo[init + 2], sudo[init]);
-		strcpy_s(mid_sudo[init + 1], sudo[init + 1]);
-		strcpy_s(mid_sudo[init], sudo[init + 2]);
+		strcpy_s(mid_sudo1[init + 2], sudo[init]);
+		strcpy_s(mid_sudo1[init + 1], sudo[init + 1]);
+		strcpy_s(mid_sudo1[init], sudo[init + 2]);
 	}
 }
 
