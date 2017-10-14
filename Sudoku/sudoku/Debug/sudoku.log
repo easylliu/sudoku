@@ -1,0 +1,14 @@
+﻿  stdafx.cpp
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\stdafx.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  sudoku.cpp
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\sudoku.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\core.h(69): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\core.h(107): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\core.h(125): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\option.h(56): warning C4715: “option::choose”: 不是所有的控件路径都返回值
+c:\users\smg\documents\visual studio 2017\projects\sudoku\sudoku\core.h(741): warning C4715: “core::deal”: 不是所有的控件路径都返回值
+    正在创建库 C:\Users\SMG\Documents\Visual Studio 2017\Projects\sudoku\Debug\sudoku.lib 和对象 C:\Users\SMG\Documents\Visual Studio 2017\Projects\sudoku\Debug\sudoku.exp
+  sudoku.vcxproj -> C:\Users\SMG\Documents\Visual Studio 2017\Projects\sudoku\Debug\sudoku.exe
+  sudoku.vcxproj -> C:\Users\SMG\Documents\Visual Studio 2017\Projects\sudoku\Debug\sudoku.pdb (Partial PDB)

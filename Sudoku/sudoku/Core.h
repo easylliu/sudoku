@@ -28,7 +28,7 @@ public:
 	//create -c
 	void generate(int sudo_count, int result[][81]);
 	//create -n -m
-_declspec(dllexport) void __stdcall generate(int number, int mode, int result[][81]);
+	_declspec(dllexport) void __stdcall generate(int number, int mode, int result[][81]);
 	//create -n -r -u
 	void generate(int number, int lower, int upper, bool unique, int result[][81]);
 
@@ -49,7 +49,7 @@ _declspec(dllexport) void __stdcall generate(int number, int mode, int result[][
 	int input_sudo(int question[][81], char* filename);//read return sudo_count
 
 													   //solve,结果存在result中
-_declspec(dllexport) void __stdcall solve(int sudo_count, int question[][81], int result[][81]);
+	_declspec(dllexport) void __stdcall solve(int sudo_count, int question[][81], int result[][81]);
 	//判断是否有解，结果存在solution中
 	bool solve(int puzzle[81], int solution[81]);
 	int deal(int sudo[9][9], option[9][9]);

@@ -24,10 +24,10 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="option.h">
+    <ClInclude Include="Core.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Core.h">
+    <ClInclude Include="option.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sudo.cpp">
+    <ClCompile Include="sudoku.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
