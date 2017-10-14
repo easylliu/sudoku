@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include "../sudo/Core.h"
+#include "../sudoku/Core.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -10,7 +10,7 @@ namespace UnitTest1
 	{
 	public:
 
-	TEST_METHOD(generate1)
+		TEST_METHOD(generate1)
 		{
 			// TODO: 在此输入测试代码
 			core core0;
@@ -121,7 +121,7 @@ namespace UnitTest1
 			};
 			bool s = core0.isvalid(sudo);
 			Assert::IsTrue(s);
-		}																			
+		}
 		TEST_METHOD(input_sudo)
 		{
 			// TODO: 在此输入测试代码
@@ -139,9 +139,9 @@ namespace UnitTest1
 			int result[1][81];
 			int result1[1][81];
 			memcpy(result1[0], sudo, sizeof(result1[0]));
-			core0.input_sudo(result,"su.txt");
-			for(int i=0;i<81;i++)
-				Assert::AreEqual(result[0][i],result1[0][i]);
+			core0.input_sudo(result, "su.txt");
+			for (int i = 0; i<81; i++)
+				Assert::AreEqual(result[0][i], result1[0][i]);
 		}
 		TEST_METHOD(print_sudo)
 		{
@@ -175,17 +175,17 @@ namespace UnitTest1
 			char *s_c0[2] = { "-c","dgh" };//-1  -C num 
 			char *s_c1[2] = { "-c","1000001" };//-1
 			char *s_s[2] = { "-s","fhdfjh" };//-2  -S file
-			char *s_n[4] = {"-n","10001","-m","1"};//-3 -n num
+			char *s_n[4] = { "-n","10001","-m","1" };//-3 -n num
 			char *s_m[4] = { "-n","1","-m","4" };//-4 -m num
 			char *s_r[4] = { "-n","1","-r","20~56" };//-5 -r num
 			char *s_rm[6] = { "-n","1","-r","20~56","-m","1" }; //-6 -m -r
-			Assert::AreEqual(core0.input_deal(2,s_c0), -1);
+			Assert::AreEqual(core0.input_deal(2, s_c0), -1);
 			Assert::AreEqual(core0.input_deal(2, s_c1), -1);
 			Assert::AreEqual(core0.input_deal(2, s_s), -2);
 			Assert::AreEqual(core0.input_deal(4, s_n), -3);
 			Assert::AreEqual(core0.input_deal(4, s_m), -4);
-		//	Assert::AreEqual(core0.input_deal(4, s_r), -5);
-		//	Assert::AreEqual(core0.input_deal(6, s_rm), -6);
+			//	Assert::AreEqual(core0.input_deal(4, s_r), -5);
+			//	Assert::AreEqual(core0.input_deal(6, s_rm), -6);
 		}
 	};
 }
