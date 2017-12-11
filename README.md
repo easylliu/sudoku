@@ -1,2 +1,0 @@
-# gitlearning
-数独
