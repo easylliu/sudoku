@@ -95,6 +95,7 @@ var r=r1;
 	}
 
 	function alterQuestion(quest) {
+		$("#alertbox").hide();
 		$("#question p").text(quest.question).attr("qid", quest.qid);
 		$("#options").empty();
 		var a = "<li><input type = \"radio\" name = \"option\" value = \"";
@@ -124,10 +125,13 @@ var r=r1;
 	}
 
 	function checkAnswer() {
+		$("#alertbox").show();
 		var checkAnswerUrl = "";
 		var ans = $("#options :radio:checked");
 		if(ans.length==0)
 		{
+			document.getElementById("alertbox").setAttribute("class","alert alert-warning");
+			$("#result").text("至少需要选择一项");
 			console.log("must select one");
 			return;
 		}
@@ -147,9 +151,15 @@ var r=r1;
 		//     }
 		// );
 		if (response.right == 1)
+		{
+			document.getElementById("alertbox").setAttribute("class","alert alert-danger");
 			$("#result").text("正确");
+		}
 		else
+		{
+			document.getElementById("alertbox").setAttribute("class","alert alert-danger");
 			$("#result").text("错误");
+		}
 
 	}
 	function getAnswer() {
