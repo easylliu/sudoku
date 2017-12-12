@@ -1,0 +1,213 @@
+<html>
+  
+<head>
+<title> tikuqimo</title>
+	<link href="./tikubeta_files/bootstrap.min.css" rel="stylesheet">
+	<link href="./tikubeta_files/layoutit.css" rel="stylesheet">
+
+	<script type="text/javascript" src="./tikubeta_files/jquery.js"></script>
+	<script type="text/javascript" src="./tikubeta_files/jquery.min.js"></script>
+	<script type="text/javascript" src="./tikubeta_files/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./tikubeta_files/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="./tikubeta_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./tikubeta_files/jquery.htmlClean.js"></script>
+	
+	<script type="text/javascript" src="./tikubeta_files/tiku.js"></script>
+	
+</head>
+
+
+		
+</div>
+<div class="col-md-12 colum">
+	<div class="container">
+		<div class="col-md-2 column">
+
+		<div class="panel-group" id="panel-list">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-01" href="#panel-element-01">练习</a>
+				</div>
+				<div id="panel-element-01" class="panel-collapse collapse">
+					<div class="panel-body">
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel1" data-toggle="tab">选择题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel1" data-toggle="tab">填空题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel1" data-toggle="tab">计算题</button>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-01" href="#panel-element-02">真题演练</a>
+				</div>
+				<div id="panel-element-02" class="panel-collapse collapse">
+					<div class="panel-body">
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel2" data-toggle="tab">2017届真题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel2" data-toggle="tab">2016届真题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel2" data-toggle="tab">2015届真题</button>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-01" href="#panel-element-03">我的收藏</a>
+				</div>
+				<div id="panel-element-03" class="panel-collapse collapse">
+					<div class="panel-body">
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel3" data-toggle="tab">选择题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel3" data-toggle="tab">填空题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel3" data-toggle="tab">计算题</button>
+						<button type="button" class="btn btn-info btn-default btn-block" href="#panel3" data-toggle="tab">历届真题</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-10 row clearfix">
+					
+			<div class="col-md-12 column">
+				<div class="tabbable" id="tabs">
+					<div class="tab-content">
+						<div class="tab-pane active" id="panel1">
+							<h3>
+								练习题库.
+							</h3>
+							<div class="row clearfix">
+								<div class="col-md-12 column">
+									<div class="row clearfix">
+										<div class="col-md-12 column">
+											<div id="question">
+												<p qid="0">点击下一题开始做题</p>
+											</div>
+											<div id="options">
+											</div>
+										</div>
+									</div>
+									<div class="row clearfix">
+										<div class="col-md-8 column">
+											<div class="alert alert-success alert-dismissable">
+												 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+												<div id="result">an apple a day keep the doctor away</div> 
+											</div>
+										</div>
+										<div class="col-md-2 column">
+											 <button type="button" class="btn btn-block btn-primary btn-default" onclick="checkAnswer()">提交</button>
+										</div>
+										<div class="col-md-2 column">
+											 <button type="button" class="btn btn-default btn-success btn-block" onclick="alternextQuestion()">下一题</button>
+										</div>
+										<ul class="pagination pagination-sm">
+											<li onclick="alterprevQuestion()">
+												 <a href="#">Prev</a>
+											</li>
+											<li onclick="alterQuestionbynum(1)">
+												 <a href="#">1</a>
+											</li>
+											<li onclick="alterQuestionbynum(2)">
+												 <a href="#">2</a>
+											</li>
+											<li onclick="alterQuestionbynum(3)">
+												 <a href="#">3</a>
+											</li>
+											<li onclick="alterQuestionbynum(4)">
+												 <a href="#">4</a>
+											</li>
+											<li onclick="alterQuestionbynum(5)">
+												 <a href="#">5</a>
+											</li>
+											<li onclick="alternextQuestion()">
+												 <a href="#">Next</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="panel2">
+							<h3>
+								真题演练.
+							</h3>
+							<div class="col-md-10 column progress">
+								<div class="progress-bar progress-success"></div>
+							</div>
+							<div>
+								<div class="time">00:00:00</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col-md-12 column">
+									<div class="row clearfix">
+										<div class="col-md-12 column">
+											<img alt="140x140" src="./tikubeta_files/1447574686560.jpg" class="question_title img-thumbnail" />
+										</div>
+									</div>
+									<div class="row clearfix">
+										<div class="col-md-8 column">
+											<div class="alert alert-success alert-dismissable">
+												 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+												<h4>
+													注意!
+												</h4> <strong>Warning!</strong> An apppel a day, keep the doctor away. <a href="#" class="alert-link">alert link</a>
+											</div>
+										</div>
+										<div class="col-md-2 column">
+											 <button type="button" class="btn btn-block btn-primary btn-default">提交</button>
+										</div>
+										<div class="col-md-2 column">
+											 <button type="button" class="btn btn-default btn-success btn-block">下一题</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-default">
+								<div class="panel-heading" id="closeCard" style="color: #DCE4EC;font-size: 15px;display: none">
+									<span>收起答题卡</span> <span class="glyphicon glyphicon-chevron-up"></span> 
+								</div>
+								<div class="panel-heading" id="openCard" style="font-size: 15px;background: none;"> <span>展开答题卡</span> <span class="glyphicon glyphicon-chevron-down"></span> </div>
+								<div id="answerCard" style="display: none;">
+									<div class="panel-body form-horizontal" style="padding: 0px;">
+									<ul class="list-unstyled">
+									<li id="ques0" onclick="saveQuestionState(0)" class="questionId question_id">1</li><li id="ques1" onclick="saveQuestionState(1)" class="questionId">2</li><li id="ques2" onclick="saveQuestionState(2)" class="questionId">3</li><li id="ques3" onclick="saveQuestionState(3)" class="questionId">4</li><li id="ques4" onclick="saveQuestionState(4)" class="questionId">5</li><li id="ques5" onclick="saveQuestionState(5)" class="questionId">6</li><li id="ques6" onclick="saveQuestionState(6)" class="questionId">7</li><li id="ques7" onclick="saveQuestionState(7)" class="questionId">8</li><li id="ques8" onclick="saveQuestionState(8)" class="questionId">9</li><li id="ques9" onclick="saveQuestionState(9)" class="questionId">10</li><li id="ques10" onclick="saveQuestionState(10)" class="questionId">11</li><li id="ques11" onclick="saveQuestionState(11)" class="questionId">12</li><li id="ques12" onclick="saveQuestionState(12)" class="questionId">13</li><li id="ques13" onclick="saveQuestionState(13)" class="questionId">14</li><li id="ques14" onclick="saveQuestionState(14)" class="questionId">15</li><li id="ques15" onclick="saveQuestionState(15)" class="questionId">16</li><li id="ques16" onclick="saveQuestionState(16)" class="questionId">17</li><li id="ques17" onclick="saveQuestionState(17)" class="questionId">18</li><li id="ques18" onclick="saveQuestionState(18)" class="questionId">19</li><li id="ques19" onclick="saveQuestionState(19)" class="questionId">20</li></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="panel3">
+							<h3>
+								我的收藏.
+							</h3>
+							<ul class="pagination pagination-sm">
+								<li>
+									 <a href="#">Prev</a>
+								</li>
+								<li>
+									 <a href="#">1</a>
+								</li>
+								<li>
+									 <a href="#">2</a>
+								</li>
+								<li>
+									 <a href="#">3</a>
+								</li>
+								<li>
+									 <a href="#">4</a>
+								</li>
+								<li>
+									 <a href="#">5</a>
+								</li>
+								<li>
+									 <a href="#">Next</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</html>
